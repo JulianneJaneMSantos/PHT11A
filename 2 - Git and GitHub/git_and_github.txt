@@ -21,3 +21,14 @@ git commit -m "This is the description."
 - View the history
 git log 
 git log --oneline
+
+- Branching
+
+- List all of the branches
+git branch -a
+
+- Create a branch
+git branch [branch-name]
+
+- Switching into a different branch
+git switch [branch-name]

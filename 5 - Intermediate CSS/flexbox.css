@@ -1,0 +1,55 @@
+.container {
+    height: 400px;
+    background-color: beige;
+}
+
+.flexItems {
+    width: 200px;
+    margin: 10px;
+    border: 3px black solid;;
+    background: lightblue;
+    text-align: center;
+}
+
+/* Flex */
+.flexContainer {
+    /* Default: Left to right / known as row*/
+    display: flex;
+    /* column, column-reverse, row, row-reverse */
+    flex-direction: row;
+    /* To fit in a one tab or to move below */
+    /* wrap, nowrap(Default) */
+    flex-wrap: wrap;
+    /* start/left, center, end/right, space-around, space-between, space-evenly*/
+    justify-content: space-evenly;
+    /* start, center, end, stretch */
+    align-items: stretch;
+}
+
+/* Flex Grow - Willingness to Grow*/
+.flexItem1 {
+    flex-grow: 1;
+}
+
+.flexItem2 {
+    flex-grow: 2;
+}
+
+.flexItem3 {
+    flex-grow: 3;
+}
+
+/* flex Shrink - Willingness to Shrink */
+.flexItem1 {
+    /* Default: All items have flex shrink of 1 */
+    flex-shrink: 1;
+}
+
+/* it will not shrink */
+.flexItem2 {
+    flex-shrink: 0;
+}
+
+.flexItems3 {
+    flex-shrink: 2;
+}

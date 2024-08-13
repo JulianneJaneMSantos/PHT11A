@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics: Typography, Text Decoration, Colors and Units</title>
+    <style>
+        .text-styling{
+            /* Default: Times New Roman */
+            font-family: Arial, Helvetica, sans-serif;
+
+            /* Default: normal */
+            /* Keyword Values */
+            font-weight: normal;
+            font-weight: bold;
+            font-weight: bolder;
+
+            /* Numeric Values */
+            /* Default: 400 */
+            font-weight: 900;
+
+            /* Font Style */
+            /* Default: normal */
+            font-style: normal;
+            font-style: italic;
+            font-style: oblique;
+
+            /* Text Alignment */
+            /* Default: left */
+            text-align: left;
+            text-align: right;
+            text-align: center;
+
+            /* Line Height Property */
+            /* Default: normal */
+            line-height: normal;
+            line-height: 4;
+            line-height: 60px;
+
+            /* Letter Spacing Property */
+            /* Default: normal */
+            letter-spacing: normal;
+            letter-spacing: 8px;
+            letter-spacing: -2px;
+        }
+
+        .text-decoration{
+            /* Default: none */
+            text-decoration: none;
+            text-decoration: line-through;
+            text-decoration: underline;
+            text-decoration: overline;
+            text-decoration: underline overline line-through;
+        }
+
+        .colors{
+            /* Color Names */
+            color: red;
+            background-color: yellow;
+
+            /* RGB/RGBA */
+            /* Alpha - Fully Transparent - Full Opaque (0 - 1) */
+            /*Value: 0-255 */
+            color: rgb(24, 180, 24);
+            background-color: rgb(0, 0, 0);
+
+            /* Hexadecimal Value */
+            /* 0 - 9, A - F */
+            color: #0000FF;
+            color: 00F;
+            /* If it is in the same value */
+            background-color: #46e0ff;
+        }
+
+        .absolute{
+            /* Default: 16px */
+            font-size: 20px;
+        }
+
+        .relative-unit-em{
+            font-size: 3em;
+            /* 3(20) */
+        }
+
+        .relative-unit-rem{
+            font-size: 4rem;
+            /* 4(16) */
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Typography</h2>
+    <div class="text-styling">This is a sample sentence.</div>
+    
+    <h2>CSS Text Decoration</h2>
+    <div class="text-decoration">This is a sample sentence.</div>
+
+    <h2>CSS Colors</h2>
+    <div class="colors">This is a colorful sentence.</div>
+
+    <h2>CSS Units of Measurement</h2>
+    <p class="absolute">Absolute Unit (px)</p>
+    <div style="font-size: 20px;">
+        <p class="relative-unit-em">Relative Unit (em)</p>
+        <!-- Relative to the Parent element (div) -->
+        <p class="relative-unit-rem">Relative Unit (rem)</p>
+        <!-- Relative to root element/ html tag/ Default root element:16px -->
+         <!-- We use this if pag lalaki ang parent element, sasabay ang child element sa paglaki ng parent element -->
+    </div>
+</body>
+</html>

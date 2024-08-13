@@ -1,0 +1,40 @@
+/* Relative: Relative to its original position */
+.relative {
+    background-color: tomato;
+    position: relative;
+    top: 30px;
+    left: 40px;
+    /* It would allow us to be able to control top, right, left, bottom position but the element still considered to take out its place*/
+    /* how we position our element, this will be relative to the element*/
+}
+
+/* Absolute: Relative to the Parent Container */
+.absolute {
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /* it will take to front */
+    /* Fixed positioning text will be under the absolute positioning */
+    /* control the t,r,f,b */
+    /* If that parent container is a position to relative */
+    /* Will be remove to the normal document flow and the other element will take up the position of absolute */
+}
+
+/* Fixed: Relative to the Viewport */
+.fixed{
+    background-color: aqua;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+
+/* Sticky: Realtive to the position given in the code*/
+.sticky {
+    background-color: yellow;
+    color: red;
+    position: sticky;
+    top: 0px;
+    /* Use when we want to allow the element to stick in the position given */
+}

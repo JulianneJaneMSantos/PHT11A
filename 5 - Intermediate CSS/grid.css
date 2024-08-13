@@ -1,0 +1,114 @@
+/* General Styling */
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+.gridContainer {
+    padding: 20px;
+}
+
+.gridItem {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.gridItem:hover {
+    transform: translateY(-5px);
+}
+
+/* Grid */
+
+/* Using px */
+.gridContainer {
+    display: grid;
+    /* Target all the columns */
+    grid-template-columns: 500px 500px;
+    /* Target only the first row (if one value)*/
+    grid-template-rows: 200px 200px;
+}
+
+/* using percentage */
+.gridContainer {
+    /* if 3 columns divide 100 by 3 */
+    /* Divide amt of columns to 100 */
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+/* Using fraction (preffered) */
+.gridContainer {
+    /* 
+        Get the total, and thats your denominator for the space taken by each column 
+        i.e. 2 + 1 + 2 + 1 = 6
+        2/6, 1/6, 2/6, 1/6
+    */
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+
+}
+
+/* Using repeat() - to repeat a centain measurement so you will not type it again */
+.gridContainer {
+    grid-template-columns: repeat(7, 1fr);
+    /* pattern of rows (100 200 100 200) */
+    grid-auto-rows: 100px 200px;
+}
+
+/* Gap - space between elements in the grid*/
+.gridContainer {
+    /* Putting 2 values for row and column gaps */
+    gap: 20px 10px;
+}
+
+/* Media queries */
+/* 
+    Mobile Devices: Less than 481px
+    iPads, Tablets: 481px - 768px
+    Small Screens, Laptops: 769px - 1024px
+    Desktops, Large Screens: 1025px - 1200px
+    Extra Large Screens, TV: 1201px and greater
+*/
+
+/* Media Query for Desktops */
+@media screen and (min-width: 1025px) {
+    .gridContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Medium Screens */
+@media screen and (min-width: 481px) and (max-width:1024px) {
+    .gridContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gridItem {
+        color: red;
+    }
+}
+
+/* Small Screens */
+@media  and (max-width: 480px) {
+    .gridContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .gridItem7, .gridItem8, .gridItem9 {
+        /* invisible */
+        display: none; 
+    }
+
+    /* @media screen and (max-width: 480px) {
+        .gridContainer {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .gridItem7, .gridItem8, .gridItem9 {
+            display: none; /* Invisible */
+        } */
+}
